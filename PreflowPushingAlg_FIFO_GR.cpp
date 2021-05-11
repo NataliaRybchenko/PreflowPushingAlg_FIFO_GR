@@ -139,19 +139,11 @@ int main() {
             for (int j = 0; j < n; ++j)
                 G[i][j] = 0;
 
-        if (n < 1 || n > 100 || m < 1 || m > 10000) {
-            cout << "Wrong data!" << endl;
-            return 0;
-        }
         for (int i = 0; i < m; ++i) {
             int v1, v2, c;
             dataFile >> v1;
             dataFile >> v2;
             dataFile >> c;
-            if (c < 1 || c > 10000 || v1 > n || v2 > n || v1 == v2) {
-                cout << "Wrong data!" << endl;
-                return 0;
-            }
             G[v1 - 1][v2 - 1] = c;
         }
 
